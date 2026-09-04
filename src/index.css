@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  background: #0A0907;
+  color: #C5BFB0;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  overflow: hidden;
+}
+::selection {
+  background: rgba(212, 184, 90, 0.25);
+  color: #FBF6E8;
+}
+
+.brass-text {
+  background: linear-gradient(135deg, #E8D28A 0%, #D4B85A 40%, #A88A2A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.patina-text {
+  background: linear-gradient(135deg, #9DDBCC 0%, #4DB295 50%, #2E9578 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ember-text {
+  background: linear-gradient(135deg, #F5C288 0%, #E89A40 50%, #D17A18 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.noise-bg {
+  background-image: radial-gradient(circle at 20% 30%, rgba(168, 138, 42, 0.06) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(30, 119, 96, 0.05) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(14, 11, 9, 1) 0%, rgba(10, 9, 7, 1) 100%);
+}
+.brass-border {
+  border: 1px solid rgba(212, 184, 90, 0.2);
+  box-shadow: inset 0 1px 0 rgba(212, 184, 90, 0.08), 0 0 0 1px rgba(0,0,0,0.3);
+}
+.scan-line {
+  background: linear-gradient(180deg, transparent 0%, rgba(212, 184, 90, 0.06) 50%, transparent 100%);
+}
+.grid-overlay {
+  background-image: linear-gradient(rgba(212, 184, 90, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 184, 90, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: rgba(20, 17, 13, 0.5); }
+::-webkit-scrollbar-thumb { background: rgba(168, 138, 42, 0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(168, 138, 42, 0.5); }
+
+/* Range slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: rgba(168, 138, 42, 0.2);
+  border-radius: 2px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #E8D28A, #A88A2A);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(212, 184, 90, 0.4);
+}
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #E8D28A, #A88A2A);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 8px rgba(212, 184, 90, 0.4);
+}
